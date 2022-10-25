@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mzabrams/fars_cleaner/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: bf0aae20ce002f1a72a5c3cfb578f0a8f36d72a837cf690838291bffadf6b21a
+  sha256: eac566a3405f13fa8b329410a6956e79008d74921aa658e29263c32115826b69
 
 build:
   noarch: python
