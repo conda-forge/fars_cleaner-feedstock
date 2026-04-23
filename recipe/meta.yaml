@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - poetry
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - poetry
   run:
     - dask
@@ -30,7 +30,7 @@ requirements:
     - pathlib
     - pooch >=1.6.0
     - pyjanitor >=0.23.1
-    - python >=3.8
+    - python >={{ python_min }}
     - requests
     - tqdm
     - thefuzz
@@ -43,6 +43,7 @@ test:
     - poetry
     - dask
     - distributed
+    - python {{ python_min }}
   imports:
     - fars_cleaner
   source_files:
